@@ -316,21 +316,22 @@ export default function Admin() {
                 <div style={{
                   width: 80, height: 80, borderRadius: 10,
                   background: '#2a1500', flexShrink: 0,
-                  overflow: 'hidden'
+                  overflow: 'hidden', aspectRatio: '1/1'
                 }}>
                   {prod.imagem_url ? (
                     <img src={prod.imagem_url} alt={prod.nome}
                       style={{
-                        width: 80, height: 80,
+                        width: '100%',
+                        height: '100%',
                         objectFit: 'cover',
-                        objectPosition: 'center',
+                        objectPosition: 'center center',
                         display: 'block'
                       }} />
                   ) : (
                     <div style={{
-                      width: 80, height: 80,
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: 34
+                      width: '100%', height: '100%',
+                      display: 'flex', alignItems: 'center',
+                      justifyContent: 'center', fontSize: 34
                     }}>🍔</div>
                   )}
                 </div>
