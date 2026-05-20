@@ -314,16 +314,24 @@ export default function Admin() {
                 opacity: prod.disponivel ? 1 : 0.5
               }}>
                 <div style={{
-                  width: 70, height: 70, borderRadius: 10,
+                  width: 80, height: 80, borderRadius: 10,
                   background: '#2a1500', flexShrink: 0,
-                  overflow: 'hidden', display: 'flex',
-                  alignItems: 'center', justifyContent: 'center'
+                  overflow: 'hidden'
                 }}>
                   {prod.imagem_url ? (
                     <img src={prod.imagem_url} alt={prod.nome}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      style={{
+                        width: 80, height: 80,
+                        objectFit: 'cover',
+                        objectPosition: 'center',
+                        display: 'block'
+                      }} />
                   ) : (
-                    <span style={{ fontSize: 30 }}>🍔</span>
+                    <div style={{
+                      width: 80, height: 80,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      fontSize: 34
+                    }}>🍔</div>
                   )}
                 </div>
                 <div style={{ flex: 1 }}>
